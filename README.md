@@ -11,12 +11,22 @@ $ npm install protractor --save
 ## need to update webdrive:
 
 $ webdrive-manager update
+
 or 
+
 $ ./node_modules/protractor/bin/webdrive-manager update
 
-## to run the robot
+## to run the robot - facebook
 ### with global package:
 $ protractor conf.js
 
 ### for for local package: 
 $ ./node_modules/protractor/bin/protractor conf.js
+
+
+## to run the robot - instagram
+### with global package:
+$ protractor conf.instagram.js
+
+### for for local package: 
+$ ./node_modules/protractor/bin/protractor conf.instagram.js
