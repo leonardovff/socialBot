@@ -20,7 +20,7 @@ $ ./node_modules/protractor/bin/webdrive-manager update
 ### with global package:
 $ protractor conf.js
 
-### for for local package: 
+### with local package: 
 $ ./node_modules/protractor/bin/protractor conf.js
 
 
@@ -28,5 +28,9 @@ $ ./node_modules/protractor/bin/protractor conf.js
 ### with global package:
 $ protractor conf.instagram.js
 
-### for for local package: 
+### with local package: 
 $ ./node_modules/protractor/bin/protractor conf.instagram.js
+
+
+### to execute all
+$ bash robo.sh
