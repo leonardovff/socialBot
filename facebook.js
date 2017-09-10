@@ -1,7 +1,7 @@
 var RoboPage = require('./facebook-po').RoboPage,
-Env = require("./env").Env,
+Env = require("./env/env").Env,
 admin = require("firebase-admin"),
-serviceAccount = require("./firekey.json");
+serviceAccount = require("./env/firekey.json");
 
 describe('robo App', () => {
   let page,
