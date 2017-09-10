@@ -31,7 +31,7 @@ class RoboPage{
                 qtd++;
                 arr.push(value);
                 if(qtd == lim){
-                callback(arr);
+                    callback(arr);
                 }
             });
             })
@@ -46,10 +46,10 @@ class RoboPage{
     loadAll(callback = null){
         let ref = this;
         browser.executeScript('window.scrollTo(0,document.body.scrollHeight)').then(function(){
-            browser.wait(ExpectedConditions.visibilityOf(element(by.css('div.phm._64f'))), 4 * 1000).then(() => {
-            callback();
+            browser.wait(ExpectedConditions.visibilityOf(element(by.css('div.phm._64f'))), 4 * 500).then(() => {
+                callback();
             }).catch(() => {
-            ref.loadAll();
+                ref.loadAll(callback);
             });
         });
     }
