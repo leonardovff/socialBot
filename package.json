@@ -1,0 +1,25 @@
+{
+  "name": "socialbot",
+  "version": "1.0.0",
+  "description": "A robot for search pictures with hashtags in facebook and instagram",
+  "main": "conf.js",
+  "scripts": {
+    "test": "protractor conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/leonardovff/socialBot.git"
+  },
+  "keywords": [
+    "bot",
+    "facebook",
+    "instagram",
+    "hashtags"
+  ],
+  "author": "leonardovff",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^5.2.1",
+    "protractor": "^5.1.2"
+  }
+}
