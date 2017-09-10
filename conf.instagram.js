@@ -1,5 +1,5 @@
 exports.config = {
-  allScriptsTimeout: 400000,
+  allScriptsTimeout: 2400000,
   specs: [
     'instagram.js'
   ],
@@ -16,7 +16,7 @@ exports.config = {
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 400000,
+    defaultTimeoutInterval: 2400000,
     print: function() {}
   }
 };

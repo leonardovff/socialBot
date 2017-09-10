@@ -4,7 +4,7 @@
 // const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: 2400000,
   specs: [
     'facebook.js'
   ],
@@ -21,7 +21,7 @@ exports.config = {
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 30000,
+    defaultTimeoutInterval: 2400000,
     print: function() {}
   },
 //   onPrepare() {

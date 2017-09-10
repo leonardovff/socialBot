@@ -2,11 +2,13 @@
 var exec = require('child_process').exec;
 
 var app = {
-    exec: (fileConf) => {
-        var execution = exec(`protractor ${fileConf}`, function(err, stdout, stderr) {
+    exec: (cmd, callback) => {
+        var execution = exec(cmd, function(err, stdout, stderr) {
             if (err) {
                 // should have err.code here?  
                 console.log(err);
+            } else if(typeof callback == 'function') {
+                    callback();
             }
             console.log(stdout);
         })
@@ -14,13 +16,25 @@ var app = {
             console.log(code);
         });
     },
+    protractor: (fileConf) => {
+        app.exec(`./node_modules/protractor/bin/protractor ${fileConf}`, ()=>{
+
+        });
+    },
     start: () => { 
-        app.exec('conf.js');
-        app.exec('conf.instagram.js');
+        app.protractor('conf.js');
+        app.protractor('conf.instagram.js');
         setTimeout( () => {
             app.start();
         }, 1000 * 60 * 60);
 
+    },
+    config: (callback) => {
+        app.exec('./node_modules/protractor/bin/webdriver-manager update', () => {
+            callback();
+        });
     }
 }
-app.start();
+app.config(() => {
+    app.start();
+})

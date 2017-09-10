@@ -4,7 +4,7 @@
   "description": "A robot for search pictures with hashtags in facebook and instagram",
   "main": "conf.js",
   "scripts": {
-    "test": "node robo.js"
+    "start": "node robo.js"
   },
   "repository": {
     "type": "git",
