@@ -1,20 +1,20 @@
 # SocialBot
 A robot for search pictures with hashtags in facebook and instagram
 
-## need install the global module package ou local
-$ npm install -g protractor
+## To use
+1. First, you need to install the packages od node:
 
-or for local
+$ npm install
 
-$ npm install protractor --save
+2. After you need to set de env of facebook password and firebasekey:
 
-## need to update webdrive:
+Rename ./env/._env to ./env/.env and put the password and login of facebook;
 
-$ webdrive-manager update
+Rename ./env/._firekey to ./env/firekey and put the credentials of your firebase application;
 
-or 
+3. Run the start of project:
+$ npm start
 
-$ ./node_modules/protractor/bin/webdrive-manager update
 
 ## to run the robot - facebook
 ### with global package:
@@ -34,3 +34,7 @@ $ ./node_modules/protractor/bin/protractor conf.instagram.js
 
 ### to execute all
 $ bash robo.sh
+
+or
+
+$ node robo.js
